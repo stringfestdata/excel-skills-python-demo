@@ -1,0 +1,36 @@
+LIVE EXCEL TEST NOTES
+George Mount / Stringfest Analytics
+Tested October 25, 2026, in desktop Excel for Windows with Copilot.
+
+This session exposed Custom skills and a Python command-line execution tool.
+Those capabilities are prerequisites; they are not guaranteed for every account.
+
+The prepared skill was installed in the Excel skills folder in OneDrive. The
+practice workbook was copied to a working file before testing.
+
+PASS 1 used the exact prompt in practice-prompts.txt. Copilot ran the bundled
+Python script and created ExpenseCheck with six rows and two Yes labels:
+Food ($600 over) and Repairs ($900 over). Supplies ($500 over) was No.
+
+The first report needed wider columns. A formatting-only follow-up requested
+Arial 11, wider columns, 24-point rows, hidden gridlines and neutral gray table
+styling. No calculation or input was changed by that follow-up. The final
+SKILL.md includes more explicit sizing guidance. The baseline screenshot and
+completed-baseline.xlsx show the accepted result after that formatting pass.
+
+PASS 2 changed only Data!C7 from 1500 to 1501 and used the exact second prompt.
+The report then showed Supplies at $501 over and Yes, with three flags total.
+completed-after-change.xlsx and the second screenshot preserve that result.
+
+The saved workbooks were checked independently against the bundled Python
+script. The source rows and all six output rows matched the expected values.
+See verification.json and supporting-files/expected-*.json.
+
+Automated tests also cover missing amounts, valid zeros, boundary amounts,
+underspending, invalid inputs and unchanged source data. The optional missing-
+value exercise in the article describes the script's tested behavior; it was
+not run through the live Copilot UI for these screenshots.
+
+ExpenseCheck contains values: it is a snapshot, not a live formula report.
+Formatting, timing and the exact Copilot messages may vary in other sessions.
+All source data and the rule are fictional teaching examples.

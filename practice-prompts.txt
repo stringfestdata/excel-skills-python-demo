@@ -1,0 +1,13 @@
+PASS 1 - Run the prepared script
+
+@expense-check-python Check tblExpenses on Data using the bundled Python script. Create ExpenseCheck and keep Data unchanged. Confirm the script you executed and the number of expenses flagged. If you cannot execute Python or read the script, stop and tell me.
+
+PASS 2 - After changing Supplies actual in Data!C7 from 1500 to 1501
+
+@expense-check-python Run the same script again on the current tblExpenses. Update ExpenseCheck. Keep Data unchanged and tell me what changed in the results.
+
+OPTIONAL CHECK - After clearing Repairs budget in Data!B10
+
+@expense-check-python Run the same check on the current table. Do not fill missing values. If validation fails, report the error and tell me whether the existing ExpenseCheck sheet is still current.
+
+Restore B10 to 1000 and C7 to 1500, then run PASS 1 to return to the baseline.
